@@ -50,4 +50,5 @@
   { "name_en": "Raloxifene", "name_jp": "ラロキシフェン", "status": "Safe", "category": "骨粗鬆症" },
   { "name_en": "Allopurinol", "name_jp": "アロプリノール", "status": "Safe", "category": "痛風" },
   { "name_en": "Febuxostat", "name_jp": "フェブキソスタット", "status": "Safe", "category": "痛風" },
-  { "name_en": "Montelukast", "name_jp": "モンテルカ
+  { "name_en": "Montelukast", "name_jp": "モンテルカスト", "status": "Safe", "category": "喘息・アレルギー" }
+]
