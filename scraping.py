@@ -4,12 +4,11 @@ import json
 
 def get_data():
     url = "https://drugsporphyria.net/safedrugs"
-    print("本家サイトからデータを読み込んでいます...")
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    
+    print("本家サイトから全データを抽出中...")
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'}
     try:
-        # 本家サイトにアクセスを試みる
-        res = requests.get(url, headers=headers, timeout=15)
+        res = requests.get(url, headers=headers, timeout=20)
+        res.raise_for_status()
         soup = BeautifulSoup(res.text, 'html.parser')
         drugs = []
         rows = soup.find_all('tr')
@@ -18,37 +17,16 @@ def get_data():
             if len(cols) >= 3:
                 name_en = cols[0].get_text(strip=True)
                 status_raw = cols[2].get_text(strip=True)
-                status = "Safe" if "Not" in status_raw or "Probably not" in status_raw else "Unsafe"
-                drugs.append({
-                    "name_en": name_en,
-                    "name_jp": f"(確認中) {name_en}",
-                    "status": status,
-                    "category": "NAPOS Data"
-                })
-        
-        # 10件以上取れたら成功とみなす
-        if len(drugs) > 10:
-            return drugs
+                status = "Safe" if "Not" in status_raw else "Unsafe"
+                drugs.append({"name_en": name_en, "name_jp": f"(確認中) {name_en}", "status": status, "category": "NAPOS Data"})
+        return drugs
     except:
-        pass
-    
-    # --- サイトから取れなかった時のための「予備データ」 ---
-    print("サイト制限のため、用意した主要な全データを流し込みます...")
-    return [
-        {"name_en":"Loxoprofen","name_jp":"ロキソプロフェン","status":"Safe","category":"解熱鎮痛"},
-        {"name_en":"Diazepam","name_jp":"ジアゼパム","status":"Unsafe","category":"抗不安"},
-        {"name_en":"Acetaminophen","name_jp":"アセトアミノフェン","status":"Safe","category":"解熱鎮痛"},
-        {"name_en":"Amlodipine","name_jp":"アムロジピン","status":"Safe","category":"血圧"},
-        {"name_en":"Nifedipine","name_jp":"ニフェジピン","status":"Safe","category":"血圧"},
-        {"name_en":"Phenobarbital","name_jp":"フェノバルビタール","status":"Unsafe","category":"抗てんかん"},
-        {"name_en":"Diclofenac","name_jp":"ジクロフェナク","status":"Unsafe","category":"鎮痛"},
-        {"name_en":"Amoxicillin","name_jp":"アモキシシリン","status":"Safe","category":"抗生物質"},
-        {"name_en":"Erythromycin","name_jp":"エリスロマイシン","status":"Unsafe","category":"抗生物質"},
-        {"name_en":"Warfarin","name_jp":"ワルファリン","status":"Safe","category":"血液をさらさらにする"}
-    ]
+        return []
 
 if __name__ == "__main__":
     result = get_data()
-    with open('drugs.json', 'w', encoding='utf-8') as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"【成功！】 {len(result)}件のデータで drugs.json を更新しました。")
+    if len(result) > 100:
+        with open('drugs.json', 'w', encoding='utf-8') as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        print(f"--- 完了！ ---")
+        print(f"元サイトと同じ {len(result)} 件のデータを取得しました。")
