@@ -1,23 +1,62 @@
 [
   {
-    "id": 1,
     "name_en": "Loxoprofen",
     "name_jp": "ロキソプロフェン",
     "status": "Safe",
-    "category": "解熱鎮痛薬"
+    "category": "解熱鎮痛"
   },
   {
-    "id": 2,
+    "name_en": "Diazepam",
+    "name_jp": "ジアゼパム",
+    "status": "Unsafe",
+    "category": "抗不安"
+  },
+  {
+    "name_en": "Acetaminophen",
+    "name_jp": "アセトアミノフェン",
+    "status": "Safe",
+    "category": "解熱鎮痛"
+  },
+  {
     "name_en": "Amlodipine",
     "name_jp": "アムロジピン",
     "status": "Safe",
-    "category": "血圧の薬"
+    "category": "血圧"
   },
   {
-    "id": 3,
+    "name_en": "Nifedipine",
+    "name_jp": "ニフェジピン",
+    "status": "Safe",
+    "category": "血圧"
+  },
+  {
     "name_en": "Phenobarbital",
     "name_jp": "フェノバルビタール",
     "status": "Unsafe",
-    "category": "抗てんかん薬"
+    "category": "抗てんかん"
+  },
+  {
+    "name_en": "Diclofenac",
+    "name_jp": "ジクロフェナク",
+    "status": "Unsafe",
+    "category": "鎮痛"
+  },
+  {
+    "name_en": "Amoxicillin",
+    "name_jp": "アモキシシリン",
+    "status": "Safe",
+    "category": "抗生物質"
+  },
+  {
+    "name_en": "Erythromycin",
+    "name_jp": "エリスロマイシン",
+    "status": "Unsafe",
+    "category": "抗生物質"
+  },
+  {
+    "name_en": "Warfarin",
+    "name_jp": "ワルファリン",
+    "status": "Safe",
+    "category": "血液をさらさらにする"
   }
 ]
