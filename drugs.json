@@ -1,0 +1,23 @@
+﻿[
+  { "name_en": "Sodium Fluoride", "name_jp": "フッ化ナトリウム", "status": "Safe", "category": "STOMATOLOGICAL" },
+  { "name_en": "Chlorhexidine", "name_jp": "クロルヘキシジン", "status": "Safe", "category": "STOMATOLOGICAL" },
+  { "name_en": "Metronidazole", "name_jp": "メトロニダゾール", "status": "Safe", "category": "STOMATOLOGICAL" },
+  { "name_en": "Atropine", "name_jp": "アトロピン", "status": "Safe", "category": "GASTROINTESTINAL" },
+  { "name_en": "Metoclopramide", "name_jp": "メトクロプラミド", "status": "Safe", "category": "GASTROINTESTINAL" },
+  { "name_en": "Ondansetron", "name_jp": "オンダンセトロン", "status": "Safe", "category": "ANTIEMETICS" },
+  { "name_en": "Bisacodyl", "name_jp": "ビサコジル", "status": "Safe", "category": "CONSTIPATION" },
+  { "name_en": "Loperamide", "name_jp": "ロペラミド", "status": "Safe", "category": "ANTIDIARRHEALS" },
+  { "name_en": "Budesonide", "name_jp": "ブデソニド", "status": "Safe", "category": "ANTIINFLAMMATORY" },
+  { "name_en": "Mesalazine", "name_jp": "メサラジン", "status": "Safe", "category": "ANTIINFLAMMATORY" },
+  { "name_en": "Warfarin", "name_jp": "ワルファリン", "status": "Safe", "category": "ANTITHROMBOTIC" },
+  { "name_en": "Clopidogrel", "name_jp": "クロピドグレル", "status": "Safe", "category": "ANTITHROMBOTIC" },
+  { "name_en": "Rivaroxaban", "name_jp": "リバーロキサバン", "status": "Safe", "category": "ANTITHROMBOTIC" },
+  { "name_en": "Apixaban", "name_jp": "アピキサバン", "status": "Safe", "category": "ANTITHROMBOTIC" },
+  { "name_en": "Tranexamic Acid", "name_jp": "トラネキサム酸", "status": "Safe", "category": "ANTIHEMORRHAGICS" },
+  { "name_en": "Loxoprofen", "name_jp": "ロキソプロフェン", "status": "Safe", "category": "NSAIDs" },
+  { "name_en": "Ibuprofen", "name_jp": "イブプロフェン", "status": "Safe", "category": "NSAIDs" },
+  { "name_en": "Acetaminophen", "name_jp": "アセトアミノフェン", "status": "Safe", "category": "ANALGESICS" },
+  { "name_en": "Diclofenac", "name_jp": "ジクロフェナク", "status": "Unsafe", "category": "NSAIDs" },
+  { "name_en": "Diazepam", "name_jp": "ジアゼパム", "status": "Unsafe", "category": "PSYCHOLEPTICS" },
+  { "name_en": "Zolpidem", "name_jp": "ゾルピデム", "status": "Unsafe", "category": "PSYCHOLEPTICS" }
+]
