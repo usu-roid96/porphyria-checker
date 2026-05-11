@@ -1,7 +1,4 @@
 ﻿[
   { "name_en": "Sodium Fluoride", "name_jp": "フッ化ナトリウム", "status": "Safe", "category": "STOMATOLOGICAL" },
-  { "name_en": "Chlorhexidine", "name_jp": "クロルヘキシジン", "status": "Safe", "category": "STOMATOLOGICAL" },
-  { "name_en": "Diazepam", "name_jp": "ジアゼパム", "status": "Unsafe", "category": "PSYCHOLEPTICS" },
-  { "name_en": "Zolpidem", "name_jp": "ゾルピデム", "status": "Unsafe", "category": "PSYCHOLEPTICS" },
-  { "name_en": "Acetaminophen", "name_jp": "アセトアミノフェン", "status": "Safe", "category": "ANALGESICS" }
+  { "name_en": "Zolpidem", "name_jp": "ゾルピデム", "status": "Unsafe", "category": "PSYCHOLEPTICS" }
 ]
