@@ -1,10 +1,7 @@
-[  { "name_en": "$names = Get-Clipboard", "name_jp": "$names = Get-Clipboard", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "$json = @()", "name_jp": "$json = @()", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "foreach ($n in $names) {", "name_jp": "foreach ($n in $names) {", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "$c = $n.trim().replace('', '')", "name_jp": "$c = $n.trim().replace('', '')", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "$json +=   { `name_en`: `$c`, `name_jp`: `$c`, `status`: `Safe`, `category`: `NAPOS Data` }", "name_jp": "$json +=   { `name_en`: `$c`, `name_jp`: `$c`, `status`: `Safe`, `category`: `NAPOS Data` }", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "}", "name_jp": "}", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "}", "name_jp": "}", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "$content = [ + ($json -join ,`n) + ]", "name_jp": "$content = [ + ($json -join ,`n) + ]", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "# UTF8（BOMなし）で保存して文字化けを完全に封じ込める", "name_jp": "# UTF8（BOMなし）で保存して文字化けを完全に封じ込める", "status": "Safe", "category": "NAPOS Data" },
-  { "name_en": "[System.IO.File]::WriteAllText($(Get-Location)/drugs.json, $content, (New-Object System.Text.UTF8Encoding($false)))", "name_jp": "[System.IO.File]::WriteAllText($(Get-Location)/drugs.json, $content, (New-Object System.Text.UTF8Encoding($false)))", "status": "Safe", "category": "NAPOS Data" }]
+[  { "name_en": "# 1120件を自動生成して保存し、送信まで一気にやります", "name_jp": "# 1120件を自動生成して保存し、送信まで一気にやります", "status": "Safe", "category": "NAPOS Data" },
+  { "name_en": "$names = Get-Clipboard;", "name_jp": "$names = Get-Clipboard;", "status": "Safe", "category": "NAPOS Data" },
+  { "name_en": "[System.IO.File]::WriteAllText($(Get-Location)/drugs.json, $json, (New-Object System.Text.UTF8Encoding($false)));", "name_jp": "[System.IO.File]::WriteAllText($(Get-Location)/drugs.json, $json, (New-Object System.Text.UTF8Encoding($false)));", "status": "Safe", "category": "NAPOS Data" },
+  { "name_en": "git add drugs.json;", "name_jp": "git add drugs.json;", "status": "Safe", "category": "NAPOS Data" },
+  { "name_en": "git commit -m Auto-fix: 1120 items;", "name_jp": "git commit -m Auto-fix: 1120 items;", "status": "Safe", "category": "NAPOS Data" },
+  { "name_en": "git push -f origin main;", "name_jp": "git push -f origin main;", "status": "Safe", "category": "NAPOS Data" },
+  { "name_en": "完了しました！もう json はまっしろではありません。サイトを見てください！", "name_jp": "完了しました！もう json はまっしろではありません。サイトを見てください！", "status": "Safe", "category": "NAPOS Data" }]
