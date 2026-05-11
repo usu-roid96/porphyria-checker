@@ -30,3 +30,4 @@ if __name__ == "__main__":
             json.dump(result, f, ensure_ascii=False, indent=2)
         print(f"--- 完了！ ---")
         print(f"元サイトと同じ {len(result)} 件のデータを取得しました。")
+        
