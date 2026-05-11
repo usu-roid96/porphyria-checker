@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name_en": "Loxoprofen",
+    "name_jp": "ロキソプロフェン",
+    "status": "Safe",
+    "category": "解熱鎮痛薬"
+  },
+  {
+    "id": 2,
+    "name_en": "Amlodipine",
+    "name_jp": "アムロジピン",
+    "status": "Safe",
+    "category": "血圧の薬"
+  },
+  {
+    "id": 3,
+    "name_en": "Phenobarbital",
+    "name_jp": "フェノバルビタール",
+    "status": "Unsafe",
+    "category": "抗てんかん薬"
+  }
+]
